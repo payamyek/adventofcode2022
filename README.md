@@ -7,7 +7,6 @@ This holiday season I have decided that for the first time to partake in the 202
 Christmas spirit, I will be documenting all my solutions and providing detail and precise annotations to allow potential 
 readers to improve in future AOC challenges.
 
-# Standings
 
 <!--- advent_readme_stars table --->
 
