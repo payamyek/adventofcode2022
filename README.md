@@ -1,3 +1,5 @@
+![img](assets/aoc_banner.jpeg)
+
 ![img](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![img](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F{payamyek}1212%2Fhit-counter)
 
 # Advent of Code 2022
