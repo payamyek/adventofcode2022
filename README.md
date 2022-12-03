@@ -8,9 +8,9 @@ This holiday season I have decided for the first time to partake in the 2022 [Ad
 
 The solutions posted will be more polished then their initial state used to complete the AOC challenges. 
 
-This repository will be structured in the following way, for every day of the challenges there will be a folder named `dayi`, where `i` is an integer detailing the day of the challenge. With two subfolders `dayi/partA` and `dayi/partB` each containg four files: `input.txt`, `test.txt`,`solution.py` and `readme.MD`.
+This repository will be structured in the following way, for every day of the challenges there will be a folder named `dayi`, where `i` is an integer detailing the day of the challenge. With two subfolders `dayi/partA` and `dayi/partB` each containg four files: `input.txt`, `test.txt`,`solution.py` and `README.MD`.
 
 - `input.txt` is the text file containing the input file of the problem set
 - `test.txt` is the text filie containging a test case of the problem set
 - `solution.py` is the python file containing the solution
-- `readme.py` provides further insight into how the solution works and the nature of the solution and problem
+- `README.py` provides further insight into how the solution works and the nature of the solution and problem
