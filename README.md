@@ -8,7 +8,13 @@ Christmas spirit, I will be documenting all my solutions and providing detail an
 readers to improve in future AOC challenges.
 
 
-<!--- advent_readme_stars table --->
+# My Progress
+
+| Day                                      | Part 1       | Part 2      |
+|------------------------------------------|--------------|-------------|
+| [1](https://adventofcode.com/2022/day/1) | ⭐ | ⭐ |
+| [2](https://adventofcode.com/2022/day/2) | ⭐ | ⭐|
+| [3](https://adventofcode.com/2022/day/3) | ⭐ | ⭐|
 
 # Format of Solutions
 
