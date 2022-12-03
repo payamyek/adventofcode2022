@@ -30,7 +30,7 @@ Once we have the three sets: `x,y,z = {'a','b','c'}, {'a'}, {'b', 'a'}`.
 We can find their intersection, aka common elements, by running the following command: `x & y & z` which yields us the 
 answer `{'a'}` so we know that `'a'` is the only common element amongst the three sets. 
 
-### Calculating Priorities
+### Calculating Priorities (Same as Part A)
 
 Calculating the priority of each common element is relatively easy once we familiarize ourselves with the `ord()` function 
 in python, an equivalent probably exists in your language of choice, which simply returns the ASCII value of character.

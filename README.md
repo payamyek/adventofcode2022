@@ -25,3 +25,5 @@ each containing four files: `input.txt`, `test.txt`,`solution.py` and `README.MD
 
 Note that each problem has a input file that is feed into the script but this input data is not the same for all users
 and thus make sure to use your own input file to run against the script to get accurate results for your tailored problem.
+i.e the `input.txt` might differ from person to person, so make sure to use your own data set to calculate the answer
+properly for your inputs.
