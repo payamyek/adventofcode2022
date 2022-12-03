@@ -18,7 +18,7 @@ each containing four files: `input.txt`, `test.txt`,`solution.py` and `README.MD
 - `input.txt` is the text file containing the input file of the problem set
 - `test.txt` is the text file containing a test case of the problem set
 - `solution.py` is the python file containing the solution
-- `README.py` provides further insight into how the solution works and the nature of the solution and problem
+- `README.md` provides further insight into how the solution works and the nature of the solution and problem
 
 
 # Caveat
