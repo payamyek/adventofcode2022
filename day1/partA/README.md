@@ -1,11 +1,11 @@
-# Day 1 - Part A Solution
+# Day 1 Part A - Solution
 
 Simply run the script and view the terminals output to view the answer. However, make sure that 
 `FILE_MODE_REAL_INPUT_MODE` is set to true if you want to run the script against the problem input data the AOC challenge 
 expects you to solve. Setting it to false will run the script against the contents of `test.txt` which is a 
 test case presented in the problem itself. 
 
-# Problem Difficulty (1-10)
+## Problem Difficulty (1-10)
 
 3.5/10
 
