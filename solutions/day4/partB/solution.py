@@ -9,7 +9,7 @@ with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
     lines = f.read().splitlines()
     lines = [line.split(',') for line in lines]
 
-# parse data into string tuples that depict the two ranges
+# parse data into tuples of arrays
 sections = [(x.split("-"), y.split("-")) for x, y in lines]
 
 # running total
