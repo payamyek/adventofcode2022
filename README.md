@@ -41,7 +41,7 @@ So my posted solutions are a result of two main points of focus:
 
 We want to write readable code because typically the second part of the problem set will require you to build upon your pre-existing codebase. 
 
-Secondly, to make the leaderboard we cant spend time optimizing code as that will result in no noticeable benefits and will just increase your submission time. 
+Secondly, to make the leaderboard we can't spend time optimizing code as that will result in no noticeable benefits and will just increase your submission time. 
 
 # Caveat
 
