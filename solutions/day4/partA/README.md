@@ -11,7 +11,7 @@ test case presented in the problem itself.
 
 ## Solution Explanation
 
-## Parsing Input Data
+### Parsing Input Data
 
 So this time around the AOC challenge stepped their game up when it comes to the format of these input files. The format
 of the file this time around was much more complicated to parse but nonetheless if you are familiar with string 
@@ -33,7 +33,7 @@ is just a tuple of arrays.
 We have basically tackled the main monster here and all that is left is looping over these tuples and converting each 
 element in the array to an integer by using `int()` before we can analyze these ranges.
 
-# Checking Ranges Are Subsets
+### Checking Ranges Are Subsets
 
 We now want to verify if one of the ranges is a subset of the other range presented in the pair. Assume we have the 
 following pair of ranges `x1,x2 = 10,20` and `y1,y2 = 9,21`. If you look at **lines 20-23** this is exactly how our 
