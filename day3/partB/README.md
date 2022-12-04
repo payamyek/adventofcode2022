@@ -12,7 +12,7 @@ test case presented in the problem itself.
 
 1.5/10
 
-## Problem Methodology
+## Solution Explanation
 
 ### Finding Common Elements
 

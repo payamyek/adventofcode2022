@@ -9,7 +9,7 @@ test case presented in the problem itself.
 
 3.5/10
 
-## Problem Methodology
+## Solution Explanation
 
 The main point of potential difficulty in this problem relies on parsing the text file and being 
 familiar with the input/output libraries of your programming language of use. 

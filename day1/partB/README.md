@@ -11,7 +11,7 @@ test case presented in the problem itself.
 
 1/10
 
-## Problem Methodology
+## Solution Explanation
 
 This problem is relatively easy if you have properly solved part A of the problem set.
 

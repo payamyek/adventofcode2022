@@ -11,7 +11,7 @@ test case presented in the problem itself.
 
 3/10
 
-## Problem Methodology
+## Solution Explanation
 
 ### Splitting String into Two Equal Partitions
 
