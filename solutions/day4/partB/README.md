@@ -65,7 +65,7 @@ add one to the running total which is what is done on **line 30** of the solutio
 
 **NOTE:** There is a better solution to do this for sure, however I went with the approach that would take the least 
 amount of time to code. So please don't feel like that this approach is optimal. This is the natural approach that
-occurred to me whilst programming in attempts to make the leaderboard. Sadly, OpenAI solutions are keep beating me :(
+occurred to me whilst programming in attempts to make the leaderboard. Sadly, OpenAI solutions are still beating me :(
 
 ## Answer
 
