@@ -35,8 +35,8 @@ MOVE_POINTS = {
 
 # open file for reading
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
-    lines = f.readlines()
-    moves = [tuple(line.strip().split(" ")) for line in lines]
+    lines = f.read().splitlines()
+    moves = [tuple(line.split(" ")) for line in lines]
 
 
 # given player one and player two's moves calculate points player two receives

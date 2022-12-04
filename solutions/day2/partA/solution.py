@@ -1,6 +1,6 @@
 # -------------------------- GLOBAL CONSTANTS --------------------------
 
-FILE_MODE_REAL_INPUT_MODE = False  # set to true to use problem input file 'input.txt', false for test file 'test.txt'
+FILE_MODE_REAL_INPUT_MODE = True  # set to true to use problem input file 'input.txt', false for test file 'test.txt'
 
 # points won depending on the game's result
 GAME_RESULT_LOST_POINTS = 0
@@ -30,8 +30,8 @@ MOVE_POINTS = {
 
 # open file for reading
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
-    lines = f.readlines()
-    moves = [tuple(line.strip().split(" ")) for line in lines]
+    lines = f.read().splitlines()
+    moves = [tuple(line.split(" ")) for line in lines]
 
 
 # given player one and player two's moves calculate points player two receives

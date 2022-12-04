@@ -22,8 +22,7 @@ test case presented in the problem itself.
 
 ### Parsing Input Data (Same as Part A)
 
-The input file consists of two characters seperated by a space on separate lines.Notice that we commonly utilize the 
-function `strip()` which just removes the `\n` character from each line. We can simply just read in this data 
+The input file consists of two characters seperated by a space on separate lines. We can simply just read in this data 
 and utilize the `split()` function to extract the player moves in the following manner `'A Y'.split(" ") == ['A', 'Y']`. 
 
 This extraction is at the heart of the problem because once we have the player moves we simply just hae to write the 
