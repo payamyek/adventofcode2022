@@ -17,7 +17,7 @@ familiar with the input/output libraries of your programming language of use.
 This problem basically requires you to choose a suitable data structure like an array or dictionary, in this case,
 that is able to track the total calories that each elf is carrying with them.
 
-One thing that we need to be cautious of is that we know we are done counting calories for an elf once we reach a newline
+One thing that we need to be cautious of is that we know we are done counting calories for an elf once we reach
 an empty space `''` character, which is just a newline in the file. 
 
 ## Answer
