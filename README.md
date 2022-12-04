@@ -17,6 +17,7 @@ readers to improve in future AOC challenges.
 | [1](https://adventofcode.com/2022/day/1) | ⭐ | ⭐ |
 | [2](https://adventofcode.com/2022/day/2) | ⭐ | ⭐|
 | [3](https://adventofcode.com/2022/day/3) | ⭐ | ⭐|
+| [4](https://adventofcode.com/2022/day/4) | ⭐ | ⭐|
 
 # Format of Solutions
 
