@@ -1,25 +1,30 @@
 # -------------------------- GLOBAL CONSTANTS --------------------------
 
-FILE_MODE_REAL_INPUT_MODE = True  # set to true to use problem input file 'input.txt', false for test file 'test.txt'
+FILE_MODE_REAL_INPUT_MODE = False  # set to true to use problem input file 'input.txt', false for test file 'test.txt'
 
 # points won depending on the game's result
-GAME_RESULT_POINTS_LOSS = 0
-GAME_RESULT_POINTS_DRAW = 3
-GAME_RESULT_POINTS_WIN = 6
+GAME_RESULT_LOST_POINTS = 0
+GAME_RESULT_DRAW_POINTS = 3
+GAME_RESULT_WIN_POINTS = 6
 
-# player moves as keys and values as points (also used to uniquely identify type of moves, ex. 3 is a rock mvoe)
-MOVE = {
-    'A': 1,
-    'B': 2,
-    'C': 3,
-    'X': 1,
-    'Y': 2,
-    'Z': 3
+# constants for move types
+ROCK_P1 = 'A'
+PAPER_P1 = 'B'
+SCISSORS_P1 = 'C'
+
+ROCK_P2 = 'X'
+PAPER_P2 = 'Y'
+SCISSORS_P2 = 'Z'
+
+# points each move grants
+MOVE_POINTS = {
+    ROCK_P1: 1,
+    PAPER_P1: 2,
+    SCISSORS_P1: 3,
+    ROCK_P2: 1,
+    PAPER_P2: 2,
+    SCISSORS_P2: 3,
 }
-
-ROCK = 1
-PAPER = 2
-SCISSORS = 3
 
 # -------------------------- PROGRAM DATA --------------------------
 
@@ -29,26 +34,24 @@ with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
     moves = [tuple(line.strip().split(" ")) for line in lines]
 
 
-# given player one and player two's moves it calculates the total points player two receives
+# given player one and player two's moves calculate points player two receives
 def points(p1_move, p2_move):
-    result = 0
-
     # brute force all possible move combinations
-    if MOVE[p1_move] == MOVE[p2_move]:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_DRAW
-    elif MOVE[p1_move] == ROCK and MOVE[p2_move] == SCISSORS:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_LOSS
-    elif MOVE[p1_move] == PAPER and MOVE[p2_move] == ROCK:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_LOSS
-    elif MOVE[p1_move] == SCISSORS and MOVE[p2_move] == PAPER:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_LOSS
-    elif MOVE[p1_move] == ROCK and MOVE[p2_move] == PAPER:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_WIN
-    elif MOVE[p1_move] == PAPER and MOVE[p2_move] == SCISSORS:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_WIN
-    elif MOVE[p1_move] == SCISSORS and MOVE[p2_move] == ROCK:
-        result = MOVE[p2_move] + GAME_RESULT_POINTS_WIN
-    return result
+    if MOVE_POINTS[p1_move] == MOVE_POINTS[p2_move]:  # same move if both moves carry the same amount of points
+        return MOVE_POINTS[p2_move] + GAME_RESULT_DRAW_POINTS
+    elif p1_move == ROCK_P1 and p2_move == SCISSORS_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_LOST_POINTS
+    elif p1_move == PAPER_P1 and p2_move == ROCK_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_LOST_POINTS
+    elif p1_move == SCISSORS_P1 and p2_move == PAPER_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_LOST_POINTS
+    elif p1_move == ROCK_P1 and p2_move == PAPER_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_WIN_POINTS
+    elif p1_move == PAPER_P1 and p2_move == SCISSORS_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_WIN_POINTS
+    elif p1_move == SCISSORS_P1 and p2_move == ROCK_P2:
+        return MOVE_POINTS[p2_move] + GAME_RESULT_WIN_POINTS
+    return 0
 
 
 # calculate total points
