@@ -18,7 +18,7 @@ This problem basically requires you to choose a suitable data structure like an 
 that is able to track the total calories that each elf is carrying with them.
 
 One thing that we need to be cautious of is that we know we are done counting calories for an elf once we reach a newline
-`\n` character. 
+an empty space `''` character, which is just a newline in the file. 
 
 ## Answer
 

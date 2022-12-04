@@ -9,17 +9,17 @@ elf_index = 1  # loop counter
 
 # open file  for reading
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
-    lines = f.readlines()
+    lines = f.read().splitlines()
 
 # calculate total calories carried by each elf
 for line in lines:
 
     # found new line, so we start processing calorie data for next elf and skip rest of statements
-    if line == '\n':
+    if line == '':
         elf_index += 1
         continue
 
-    value = int(line.strip())  # remove newlines and convert to int
+    value = int(line)  # remove newlines and convert to int
 
     # store running total of the elf's total calorie count
     if calories_dict.get(elf_index) is None:
