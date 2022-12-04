@@ -35,10 +35,11 @@ each containing four files: `input.txt`, `test.txt`,`solution.py` and `README.MD
 
 As programmers, we are occasionally told to write optimized code and code that is highly efficient on a consistent basis. However, this is not the place for it in my opinion. The AOC challenges measure a programmer's proficiency in writing code extremely fast and code optimization simply serves no purpose in these challenges as the provided `input.txt` files are small in size. Hence, even if we were to optimize the codebase these optimizations will not be realized in these challenges. 
 
-So my posted solutions are a result of my two main points of focus:
-1. Write code that is readable
-2. Write code quickly without regard for optimizations 
-3. We want to write readable code because typically the second part of the problems set will require you to build upon your pre-existing codebase. 
+So my posted solutions are a result of two main points of focus:
+1. Writing code that is readable
+2. Writing code quickly without regard for optimizations 
+
+We want to write readable code because typically the second part of the problem set will require you to build upon your pre-existing codebase. 
 
 Secondly, to make the leaderboard we cant spend time optimizing code as that will result in no noticeable benefits and will just increase your submission time. 
 
