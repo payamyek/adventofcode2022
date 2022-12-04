@@ -6,16 +6,13 @@ FILE_MODE_REAL_INPUT_MODE = True  # set to true to use problem input file 'input
 
 # open file for reading
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
-    lines = f.readlines()
+    lines = f.read().splitlines()
 
 # running total of priorities
 total_priority_sum = 0
 
 # loop over all rucksacks in groups of threes
 for sack in lines:
-    # clean up string
-    sack = sack.strip()
-
     # get middle index of sack
     mid = len(sack) // 2
 

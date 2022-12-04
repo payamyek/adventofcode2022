@@ -6,7 +6,7 @@ FILE_MODE_REAL_INPUT_MODE = True  # set to true to use problem input file 'input
 
 # open file for reading
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
-    lines = f.readlines()
+    lines = f.read().splitlines()
 
 # running total of priorities
 total_priority_sum = 0
@@ -14,10 +14,10 @@ total_priority_sum = 0
 # loop over all rucksacks in groups of threes
 for i in range(0, len(lines) - 2, 3):
     # get the three related rucksacks
-    sack = [lines[i].strip(), lines[i+1].strip(), lines[i+2].strip()]
+    sacks = [lines[i], lines[i+1], lines[i+2]]
 
     # find common elements among all three sets
-    common = set(sack[0]) & set(sack[1]) & set(sack[2])
+    common = set(sacks[0]) & set(sacks[1]) & set(sacks[2])
 
     # running value of priorities for the current group rucksacks
     priority_sum = 0
