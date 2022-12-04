@@ -1,5 +1,7 @@
 # Day 4 Part A - Solution
 
+This problem mainly depends on your ability to parse input data that is slightly more advanced, however if you are familiar with the `split()` function in python it shouldn't be a game changer. However, new programmers will probably struggle with determining how to check if one range is contained within another. All these points of potential contention in solving the problem are explained below!
+
 Simply run the script and view the terminal's output to view the answer. However, make sure that 
 `FILE_MODE_REAL_INPUT_MODE` is set to true if you want to run the script against the problem input data the AOC challenge 
 expects you to solve. Setting it to false will run the script against the contents of `test.txt` which is a 
