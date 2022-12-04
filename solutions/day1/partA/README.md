@@ -43,8 +43,8 @@ if it does exist we just update the total sum for that elf, which is what occurs
 
 ### Finding Max Calories
 
-Simply get all the values in the dictionary by calling `calories_dict.values()` and run the `max()` function on that
-object to get the maximum number of calories any elf is carrying. 
+Simply retrieve all the values in the dictionary by calling `calories_dict.values()` and run the `max()` function on the
+values object to get the maximum number of calories any elf is carrying. 
 
 ## Answer
 
