@@ -20,7 +20,7 @@ readers to improve in future AOC challenges.
 
 # Format of Solutions
 
-The solutions posted will be more polished than their initial state used to complete the AOC challenges. 
+The solutions posted will be more polished than their initial state used to complete the AOC challenges and can be found under the `solutions/*` directory.
 
 This repository will be structured in the following way, for every day of the challenges there will be a folder named 
 `dayi`, where `i` is an integer detailing the day of the challenge. With two sub folders `dayi/partA` and `dayi/partB` 
