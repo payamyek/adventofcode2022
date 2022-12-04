@@ -39,7 +39,7 @@ We now want to verify if one of the ranges is a subset of the other range presen
 following pair of ranges `x1,x2 = 10,20` and `y1,y2 = 9,21`. If you look at **lines 20-23** this is exactly how our 
 variables are structured before we start comparing them. 
 
-Lets visualize these ranges to determine how can we determine if one is a subset of the other.
+Let's visualize these ranges to determine how can we determine if one is a subset of the other.
 
 ![img](../../../assets/d2pa.png)
 
