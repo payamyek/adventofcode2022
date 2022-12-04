@@ -11,7 +11,7 @@ readers to improve in future AOC challenges.
 
 # Solution Upload Time
 
-I will work my hardest to ensure that my solutions are uploaded within **24 hours** of the release of the AOC daily challenge. 
+I will work my hardest to ensure that my solutions are uploaded within **24 hours** of the AOC daily challenge release. 
 
 # Progress
 
