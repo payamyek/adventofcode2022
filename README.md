@@ -34,7 +34,7 @@ each containing four files: `input.txt`, `test.txt`,`solution.py` and `README.MD
 
 # Focus of Solutions
 
-As programmers, we are occasionally told to write optimized code and code that is highly efficient on a consistent basis. However, this is not the place for it in my opinion. The AOC challenges measure a programmer's proficiency in writing code extremely fast and code optimization simply serves no purpose in these challenges as the provided `input.txt` files are small in size. Hence, even if we were to optimize the codebase these optimizations will not be realized in these challenges. 
+As programmers, we are occasionally told to write optimized and highly efficient code. However, this is not the place for it in my opinion. The AOC challenges measure a programmer's proficiency in writing code quickly and code optimization simply serves no purpose in these challenges as the provided `input.txt` files are small in nature. Hence, even if we were to optimize the codebase these optimizations will not be realized in these challenges. 
 
 So my posted solutions are a result of two main points of focus:
 1. Writing code that is readable
