@@ -21,7 +21,7 @@ The input file consists of two characters seperated by a space on separate lines
 and utilize the `split()` function to extract the player moves in the following manner 
 `'A Y'.split(" ") == ['A', 'Y']`. 
 
-This extraction is at the heart of the problem because once we have the player moves we simply just hae to write the 
+This extraction is at the heart of the problem because once we have the player moves we simply just have to write the 
 brute force logic to calculate the total points each move grants player two.
 
 ### Calculate Points
