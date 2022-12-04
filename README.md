@@ -9,6 +9,9 @@ This holiday season I have decided for the first time to partake in the 2022 [Ad
 Christmas spirit, I will be documenting all my solutions and providing detailed and precise annotations to allow potential 
 readers to improve in future AOC challenges.
 
+# Solution Upload Time
+
+I will work my hardest to ensure that my solutions are uploaded within 24 hours of the release of the AOC daily challenge. 
 
 # Progress
 
