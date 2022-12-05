@@ -48,11 +48,7 @@ if it does exist we just update the total sum for that elf, which is what occurs
 ### Finding Top Three Max Calories
 
 Simply retrieve all the values in the dictionary by calling `calories_dict.values()` and run the `max()` function on the
-values object to get the maximum number of calories any elf is carrying. 
-
-Simply, convert the dictionary's values into a list by calling `list(calories_dict.values())`.
-
-Then find the largest value in the list and remove all occurrences of it.
+values object to get the maximum number of calories any elf is carrying. Then remove all occurrences of the largest value in list.
 
 Then find the largest value of the new list, which is now the global second-largest value, and remove all occurrences 
 of it from the list.
