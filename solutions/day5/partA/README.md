@@ -35,10 +35,22 @@ us to add crates add the end of list which inverts the order of the crates and h
 
 ### Parsing Moves
 
-We simply use the regex library in Python to extract the move data and then we move the crates as accordance to those
+We simply use the regex library in Python to extract the move data, and then we move the crates as accordance to those
 instructions.
 
-Using `pop()` removes the last element of a list, and we utilize this method here to perform these crate movements.
+There isn't really much to explain here other than that you must be familiar with basic regex expressions in order
+to effectively parse the moves. Other solutions exist but using regex is the most natural solution in my opinion. 
+
+### Performing the Crate Moves
+
+Using `pop()` removes the last element of a list, and we exactly utilize this method here to perform the crate movements.
+
+So if the instruction is `move 2 from 3 to 1`, we do the following:
+
+1. Access the third stack using `stacks[3]`
+2. Remove two items from `stacks[3]` by calling `pop()` twice and store the popped crates into a local variable
+3. Access the first stack using `stacks[1]`
+4. Update the first stack by adding the newly popped crates to the first stack
 
 ## Answer
 
