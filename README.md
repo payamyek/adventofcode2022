@@ -22,6 +22,7 @@ I will work my hardest to ensure that my solutions are uploaded within **24 hour
 | [3](https://adventofcode.com/2022/day/3) | ⭐ | ⭐|
 | [4](https://adventofcode.com/2022/day/4) | ⭐ | ⭐|
 | [5](https://adventofcode.com/2022/day/5) | ⭐ | ⭐|
+| [6](https://adventofcode.com/2022/day/6) | ⭐ | ⭐|
 
 # Format of Solutions
 
