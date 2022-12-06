@@ -20,7 +20,7 @@ stacks = dict()
 for line in lines:
 
     # stop processing the crates once no crates found
-    if line == '' or '[' not in line:
+    if '[' not in line:
         break
 
     # the stack the crate belongs to

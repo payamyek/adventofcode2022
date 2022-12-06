@@ -12,7 +12,7 @@ test case presented in the problem itself.
 
 ## Answer
 
-The answer for this problem is *NUM*.
+The answer for this problem is *VGBBJCRMN*.
 
 This answer is true for my given specialized input data. Note that every AOC user will not receive the
 same input data for even the same problem.
