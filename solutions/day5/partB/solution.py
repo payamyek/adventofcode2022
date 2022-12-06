@@ -30,7 +30,7 @@ for line in lines:
     for i in range(0, len(line) - 2, 4):
 
         # valid crate
-        if '[' in line[i:i+3]:
+        if line[i] == '[':
             # extract crate
             crate = line[i:i+3]
 
