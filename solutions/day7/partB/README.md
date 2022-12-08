@@ -1,4 +1,4 @@
-# Day N Part K - Solution
+# Day N Part B - Solution
 
 Simply run the script and view the terminal's output to view the answer. However, make sure that 
 `FILE_MODE_REAL_INPUT_MODE` is set to true if you want to run the script against the problem input data the AOC challenge 
