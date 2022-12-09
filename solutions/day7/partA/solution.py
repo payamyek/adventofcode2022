@@ -42,17 +42,8 @@ for line in lines:
         file_path = f"{cwd}{tokens[1]}"
         files_dict[file_path] = int(tokens[0])
 
-
-# define custom class comparison function
-class CustomerComparator(tuple):
-    def __lt__(self, other):
-        return self[0].count('/') > other[0].count('/')
-
 # store total size of each dict
 directory_dict = dict()
-
-# sort files by nestation level
-files = sorted(files_dict.items(), key=CustomerComparator)
 
 def cascade_size_changes(path_name, size):
     parent_path = get_parent(path_name)
@@ -65,7 +56,7 @@ def cascade_size_changes(path_name, size):
     safe_dict_update(directory_dict, '/', size)
 
 # calculate sizes of each directory
-for k, v in files:
+for k, v in files_dict.items():
     cascade_size_changes(k, v)
 
 result = 0
