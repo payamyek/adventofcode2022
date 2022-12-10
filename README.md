@@ -9,6 +9,10 @@ This holiday season I have decided for the first time to partake in the 2022 [Ad
 Christmas spirit, I will be documenting all my solutions and providing detailed and precise annotations to allow potential 
 readers to improve in future AOC challenges.
 
+# Input Files
+
+INPUT DATA WILL NOT BE INCLUDED IN THE GIT REPO IN ACCORDANCE WITH THE RULES AND WISHES OF THE AOC'S CREATOR. YOU WILL SEE FILES WITH THE FOLLOWING FILE TYPES *.gpg* WHICH ARE JUST ENCRYPTED TEXT FILES. SO PLEASE DEFINE YOUR OWN `input.txt` AND `test.txt` FILES TO UTILIZE THE CODEBASE SOLUTIONS.
+
 # Solution Upload Time
 
 I will work my hardest to ensure that my solutions are uploaded within **24 hours** of the AOC daily challenge release. 
