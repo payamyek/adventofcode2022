@@ -131,5 +131,6 @@ dmypy.json
 .DS_Store
 
 # do not commit input files
-./solutions/*.txt
+input.txt
+test.txt
 *.sh
