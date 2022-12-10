@@ -132,3 +132,4 @@ dmypy.json
 
 # do not commit input files
 ./solutions/*.txt
+*.sh
