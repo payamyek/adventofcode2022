@@ -1,6 +1,15 @@
 # -------------------------- GLOBAL CONSTANTS --------------------------
 
-FILE_MODE_REAL_INPUT_MODE = True      # set to true to use problem input file 'input.txt', false for test file 'test.txt'
+FILE_MODE_REAL_INPUT_MODE = True  # set to true to use problem input file 'input.txt', false for test file 'test.txt'
+
+ # constants for knot moving directions
+UP = 'U'
+DOWN = 'D'
+LEFT = 'L'
+RIGHT = 'R'
+
+X_CORD = 0
+Y_CORD = 1
 
 # -------------------------- PROGRAM DATA --------------------------
 
@@ -8,157 +17,104 @@ FILE_MODE_REAL_INPUT_MODE = True      # set to true to use problem input file 'i
 with open('input.txt' if FILE_MODE_REAL_INPUT_MODE else 'test.txt', 'r') as f:
     lines = f.read().splitlines()
 
-# starting positions for rope head and tail
-tail_pos = (0, 0)
-head_pos = (0, 0)
+# store location of ten knots
+head = [0, 0]
+tail = [0, 0]
 
 # store all tail positions
-tail_pos_set = {tail_pos}
-
-def move_right(head, tail):
-    # extract co-ordinates
-    head_x, head_y = head
-    tail_x, tail_y = tail
-
-    # move tail according to head's position
-    if head_is_top_right(head_x, head_y, tail_x, tail_y):
-        tail_x += 1
-        tail_y += 1
-    elif head_is_right(head_x, head_y, tail_x, tail_y):
-        tail_x += 1
-    elif head_is_bottom_right(head_x, head_y, tail_x, tail_y):
-        tail_x += 1
-        tail_y -= 1
-
-    # move head right
-    head_x += 1
-
-    # new head and tail positions
-    return (head_x, head_y), (tail_x, tail_y)
+seen = {tuple(tail)}
 
 
-def move_left(head, tail):
-    # extract co-ordinates
-    head_x, head_y = head
-    tail_x, tail_y = tail
+# ---------------------------- HELPER LAMBDA FUNCTIONS ----------------------------
 
-    # move tail according to head's position
-    if head_is_top_left(head_x, head_y, tail_x, tail_y):
-        tail_x -= 1
-        tail_y += 1
-    elif head_is_left(head_x, head_y, tail_x, tail_y):
-        tail_x -= 1
-    elif head_is_bottom_left(head_x, head_y, tail_x, tail_y):
-        tail_x -= 1
-        tail_y -= 1
+is_head_two_right = lambda: head[X_CORD] - tail[X_CORD] == 2 and head[Y_CORD] == tail[Y_CORD]
 
-    # move head right
-    head_x -= 1
+is_head_two_left = lambda: tail[X_CORD] - head[X_CORD] == 2  and head[Y_CORD] == tail[Y_CORD]
 
-    # new head and tail positions
-    return (head_x, head_y), (tail_x, tail_y)
+is_head_two_up = lambda: head[Y_CORD] - tail[Y_CORD] == 2 and head[X_CORD] == tail[X_CORD]
+
+is_head_two_down = lambda: tail[Y_CORD] - head[Y_CORD] == 2 and head[X_CORD] == tail[X_CORD]
+
+is_head_up_right = lambda: (head[Y_CORD] - tail[Y_CORD] == 2 and head[X_CORD] - tail[X_CORD] == 1) or (head[Y_CORD] - tail[Y_CORD] == 1 and head[X_CORD] - tail[X_CORD] == 2)
+
+is_head_up_left = lambda: (head[Y_CORD] - tail[Y_CORD] == 2 and tail[X_CORD] - head[X_CORD] == 1) or (head[Y_CORD] - tail[Y_CORD] == 1 and tail[X_CORD] - head[X_CORD] == 2)
+
+is_head_down_left = lambda: (tail[Y_CORD] - head[Y_CORD] == 2 and tail[X_CORD] - head[X_CORD] == 1) or (tail[Y_CORD] - head[Y_CORD] == 1 and tail[X_CORD] - head[X_CORD] == 2)
+
+is_head_down_right = lambda: (tail[Y_CORD] - head[Y_CORD] == 2 and head[X_CORD] - tail[X_CORD] == 1) or (tail[Y_CORD] - head[Y_CORD] == 1 and head[X_CORD] - tail[X_CORD] == 2)
 
 
-def move_up(head, tail):
-    # extract co-ordinates
-    head_x, head_y = head
-    tail_x, tail_y = tail
-
-    # move tail according to head's position
-    if head_is_top_left(head_x, head_y, tail_x, tail_y):
-        tail_x -= 1
-        tail_y += 1
-    elif head_is_top(head_x, head_y, tail_x, tail_y):
-        tail_y += 1
-    elif head_is_top_right(head_x, head_y, tail_x, tail_y):
-        tail_x += 1
-        tail_y += 1
-
-    # move head right
-    head_y += 1
-
-    # new head and tail positions
-    return (head_x, head_y), (tail_x, tail_y)
+# determines which move needs to be made
+def move_handler(direction, units):
+    if direction == UP:
+        move_head_up(units)
+    elif direction == DOWN:
+        move_head_down(units)
+    elif direction == LEFT:
+        move_head_left(units)
+    elif direction == RIGHT:
+        move_head_right(units)
 
 
-def move_down(head, tail):
-    # extract co-ordinates
-    head_x, head_y = head
-    tail_x, tail_y = tail
+# moves head up
+def move_head_up(units):
+    for _ in range(units):
+        head[Y_CORD] += 1
+        update_tail_position()
 
-    # move tail according to head's position
-    if head_is_bottom_left(head_x, head_y, tail_x, tail_y):
-        tail_x -= 1
-        tail_y -= 1
-    elif head_is_bottom(head_x, head_y, tail_x, tail_y):
-        tail_y -= 1
-    elif head_is_bottom_right(head_x, head_y, tail_x, tail_y):
-        tail_x += 1
-        tail_y -= 1
-
-    # move head right
-    head_y -= 1
-
-    # new head and tail positions
-    return (head_x, head_y), (tail_x, tail_y)
+# moves head down
+def move_head_down(units):
+    for _ in range(units):
+        head[Y_CORD] -= 1
+        update_tail_position()
 
 
-def head_is_top_left(head_x, head_y, tail_x, tail_y):
-    return head_x + 1 == tail_x and head_y - 1 == tail_y
-
-def head_is_top(head_x, head_y, tail_x, tail_y):
-    return head_x == tail_x and head_y - 1 == tail_y
-
-def head_is_top_right(head_x, head_y, tail_x, tail_y):
-    return head_x - 1 == tail_x and head_y - 1 == tail_y
-
-def head_is_left(head_x, head_y, tail_x, tail_y):
-    return head_x + 1 == tail_x and head_y == tail_y
-
-def head_is_right(head_x, head_y, tail_x, tail_y):
-    return head_x - 1 == tail_x and head_y == tail_y
-
-def head_is_bottom_left(head_x, head_y, tail_x, tail_y):
-    return head_x + 1 == tail_x and head_y + 1 == tail_y
-
-def head_is_bottom(head_x, head_y, tail_x, tail_y):
-    return head_x == tail_x and head_y + 1 == tail_y
-
-def head_is_bottom_right(head_x, head_y, tail_x, tail_y):
-    return head_x - 1 == tail_x and head_y + 1 == tail_y
+# moves head left
+def move_head_left(units):
+    for _ in range(units):
+        head[X_CORD] -= 1
+        update_tail_position()
 
 
-def move_rope(head, tail, direction, amount):
-    for _ in range(amount):
-        head, tail = execute_move(head, tail, direction)
-
-        # update seen tail positions
-        tail_pos_set.add(tail)
-
-    return head, tail
-
-def execute_move(head, tail, direction):
-    if direction == 'R':
-        return move_right(head, tail)
-    elif direction == 'L':
-        return move_left(head, tail)
-    elif direction == 'U':
-        return move_up(head, tail)
-    return move_down(head, tail)
+# moves head right
+def move_head_right(units):
+    for _ in range(units):
+        head[X_CORD] += 1
+        update_tail_position()
 
 
 
-# process all moves
-for move in lines:
-    # parse txt file
-    tokens = move.split(" ")
+# after head moves, update location of tail
+def update_tail_position():
+    if is_head_two_right(): # move tail right
+        tail[X_CORD] += 1
+    elif is_head_two_left(): # move tail left
+        tail[X_CORD] -= 1
+    elif is_head_two_up(): # move tail up
+        tail[Y_CORD] += 1
+    elif is_head_two_down(): # move tail down
+        tail[Y_CORD] -= 1
+    elif is_head_up_right():
+        tail[X_CORD] += 1
+        tail[Y_CORD] += 1
+    elif is_head_up_left():
+        tail[X_CORD] -= 1
+        tail[Y_CORD] += 1
+    elif is_head_down_left():
+        tail[X_CORD] -= 1
+        tail[Y_CORD] -= 1
+    elif is_head_down_right():
+        tail[X_CORD] += 1
+        tail[Y_CORD] -= 1
 
-    # move head
-    head_pos, tail_pos = move_rope(head_pos, tail_pos, tokens[0], int(tokens[1]))
+    # record new tail position
+    seen.add(tuple(tail))
 
 
-# get number of elements in set
-result = len(tail_pos_set)
+for line in lines:
+    tokens = line.split(" ")
 
-# print answer
-print(result)
+    # make moves
+    move_handler(tokens[0], int(tokens[1]))
+
+print(len(seen))
