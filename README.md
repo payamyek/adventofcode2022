@@ -13,10 +13,6 @@ readers to improve in future AOC challenges.
 
 INPUT DATA WILL NOT BE INCLUDED IN THE GIT REPO IN ACCORDANCE WITH THE RULES AND WISHES OF THE AOC'S CREATOR. YOU WILL SEE FILES WITH THE FILE TYPE `.gpg` WHICH ARE JUST ENCRYPTED TEXT FILES. SO PLEASE DEFINE YOUR OWN `input.txt` AND `test.txt` FILES TO UTILIZE THE CODEBASE SOLUTIONS.
 
-# Solution Upload Time
-
-I will work my hardest to ensure that my solutions are uploaded within **24 hours** of the AOC daily challenge release. 
-
 # Progress
 
 | Day                                      | Part 1       | Part 2      |
@@ -29,6 +25,7 @@ I will work my hardest to ensure that my solutions are uploaded within **24 hour
 | [6](https://adventofcode.com/2022/day/6) | ⭐ | ⭐|
 | [7](https://adventofcode.com/2022/day/7) | ⭐ | ⭐|
 | [8](https://adventofcode.com/2022/day/8) | ⭐ | ⭐|
+| [9](https://adventofcode.com/2022/day/9) | ⭐ | ⭐|
 
 
 # Format of Solutions
